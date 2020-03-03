@@ -1,0 +1,37 @@
+.page-header-text{
+    vertical-align: center;
+}
+.page-header{
+    background-color: #F8F9FA;
+}
+.mission-title-col{
+    text-align: right;
+    vertical-align: center;
+}
+.page-header-signature{
+    color: #CECECC;
+}
+
+
+
+.works-log-block{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+.works-log-header{
+    text-align: center;
+}
+.action-table-header{
+    background-color: #DDD;
+}
+.action-table-value-cell{
+    background-color: #EEEEFF;
+}
+.action-table-finished-cell{
+    background-color: #C8FFCC;
+}
+.action-table-unfinished-cell{
+    background-color: #FFEEFF;
+}
+

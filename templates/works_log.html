@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <div class="works-log-block">
+                <div class="works-log-header">
+                    <h2>Works log</h2>
+                </div>
+                {% for job in jobs %}
+                <div class="action-block">
+                    <h2>Action # {{ loop.index }}</h2>
+                    <table class="table-borderless table">
+                        <thead>
+                            <tr class="action-table-header">
+                                <th scope="col">Title of activity</th>
+                                <th scope="col">Leader</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">List of collaborators</th>
+                                <th scope="col">Is finished</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="action-table-value-cell">
+                                    {{ job.job }}
+                                </td>
+                                <td class="action-table-value-cell">
+                                    {{ job.team_leader }}
+                                </td>
+                                <td class="action-table-value-cell">
+                                    {{ job.work_size }} hours
+                                </td>
+                                <td class="action-table-value-cell">
+                                    {{ job.collaborators }}
+                                </td>
+                                {% if job.is_finished %}
+                                <td class="action-table-finished-cell">
+                                    Finished
+                                </td>
+                                {% else %}
+                                <td class="action-table-unfinished-cell">
+                                    Is not finished
+                                </td>
+                                {% endif %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

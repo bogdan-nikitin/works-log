@@ -20,3 +20,6 @@ class Jobs(SqlAlchemyBase):
                            default=datetime.datetime.now)
     end_date = sa.Column(sa.DateTime, nullable=True)
     is_finished = sa.Column(sa.Boolean, nullable=True)
+
+    def __repr__(self):
+        return f'<Job> {self.job}'
